@@ -2,7 +2,7 @@
 
 import { Lesson } from "./lesson";
 
-export const lessons: Lesson[] = [
+export const testLessons: Lesson[] = [
     {
         id: 1,
         description: 'Setting Up an Angular Development Environment',
