@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { globalEventBus, LESSONS_LIST_AVAILABLE } from './event-bus';
+import { globalEventBus, LESSONS_LIST_AVAILABLE, ADD_NEW_LESSON } from './event-bus';
 import { testLessons } from '../sharred/model/test-lessons';
 
 @Component({
@@ -13,6 +13,10 @@ export class EventBusExperimentsComponent implements OnInit {
 
   ngOnInit() {
     globalEventBus.notifyObservers(LESSONS_LIST_AVAILABLE, testLessons.slice(0))
+  }
+
+  addLesson(lessonText: string) {
+    globalEventBus.notifyObservers(ADD_NEW_LESSON, lessonText);
   }
 
 }
