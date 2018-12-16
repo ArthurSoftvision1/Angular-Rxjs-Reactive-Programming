@@ -10,7 +10,7 @@ import { Lesson } from '../sharred/model/lesson';
 })
 export class EventBusExperimentsComponent implements OnInit {
 
-  lessons: Lesson[] = [];
+  private lessons: Lesson[] = [];
 
   constructor() { }
 
